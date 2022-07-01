@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Personas</title>
+    <link href="css/estilos.css" rel ="stylesheet"/>
+</head>
+<body onload="mostrarPersonas()"> <!--LLAMAMOS AL EVENTO ONLOAD CUANDO SE CARGA LA PAGINA AUTOMATICAMENTE, ASI MUESTRA NUESTRO ARRAY DE PERSONAS-->
+    <div class="contenedor" id="cabecero">
+        <h1>Listado de Personas</h1>
+    </div>
+
+    <div class="contenedor"> 
+        <div class="elemento">
+            <ul id="personas"></ul> <!--ul significa unorderd list, que es donde almacenaremos los nombres-->
+             <!-- <li>Juan Perez</li>   ASI SERIA AGREGAR UN OBJETO A LA LISTA, LI SIGNIFICA ITEM LIST-->
+        </div>
+    </div>
+    <!--Agregamos otro div, que va a tener el formulario para agregar + personas-->
+    <div class="contenedor">
+        <div style="text-align: center;"> <!--agregamos otro div y lo alineamos al centro -->
+            <button style="cursor:pointer" onclick="agregarPersona()">+</button>
+            <!--creamos un boton, el cursor se vuelve apuntador, y creamos el evento onclick que llame la funcion agregarPersona, y se muestra como el signo +-->
+        </div>
+        <form id="forma">
+            <input type="text" id="nombre" placeholder="Nombre"/>
+            <input type="text" id="apellido" placeholder="Apellido"/>
+
+        </form>
+    </div>
+     <!--ASOCIAMOS CON LAS CLASES DE JAVASCRIPT -->
+    <script src="js/persona.js"></script>
+    <script src="js/app.js"></script>
+    
+
+</body>
+</html>
